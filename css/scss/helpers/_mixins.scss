@@ -1,0 +1,10 @@
+@mixin wrap ($width){
+    max-width: $width;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
