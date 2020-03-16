@@ -4,14 +4,19 @@
     &__title {
         margin-bottom: 14px;
     }
-
     &__description {
         @include fonts(1.6rem, 1.6);
         margin-bottom: 24px;
     }
-
+    &__title,
+    &__description {
+        text-align: center;
+    }
     &__tabs {
         margin-bottom: 31px;
+        @include media-tablet {
+            justify-content: center;
+        }
 
         .tab + .tab {
             margin-left: 7px;
@@ -30,6 +35,9 @@
     width: calc(100% / 3 - 2%);
     border-radius: 8px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
     @extend %transition;
     @extend %shadowed;
     &--long {
@@ -41,7 +49,13 @@
             color: $primary-color;
         }
     }
-
+    @include media-tablet {
+        width: calc(100% / 2 - 2%);
+    }
+    @include media-mobile {
+        width: calc(100% / 1 - 2%);
+        margin-bottom: 4%;
+    }
 }
 
 .strategy__img {
@@ -49,10 +63,16 @@
     img {
         display: block;
         width: 100%;
+        @include media-tablet {
+            width: auto;
+        }
     }
 }
 
 .strategy__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 24px 33px;
 }
@@ -63,6 +83,7 @@
 }
 
 .strategy__tabs {
+    margin-top: auto;
     .tab + .tab {
         margin-left: 4px;
     }

@@ -1,0 +1,29 @@
+.burger__menu {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    @include size(31px, 25px);
+    @include media-tablet {
+        display: inline-block;
+    }
+
+    .burger__line{
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $burger-color;
+        position: absolute;
+        top: 50%; margin-top: -1.5px;
+        &::before,
+        &::after {
+            content: '';
+            @extend .burger__line;
+        }
+        &::before {
+            transform: translateY(10px);
+        }
+        &::after {
+            transform: translateY(-10px);
+        }
+    }
+}

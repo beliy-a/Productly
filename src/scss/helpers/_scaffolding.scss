@@ -22,18 +22,30 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     @extend %font-secondary;
     @include fonts(4.4rem, 1.22, bold);
+    @include media-mobile {
+        @include fonts(3.2rem, 1.22, bold);
+    }
 }
 
 h2 {
     @include fonts(3.4rem, 1.35, bold);
+     @include media-mobile{
+        @include fonts(2.4rem, 1.4, bold);
+    }
 }
 
 h3 {
     @include fonts (2.4rem, 1.4, bold);
+    @include media-mobile{
+        @include fonts(2.1rem, 1.4, bold);
+    }
 }
 
 h4 {
      @include fonts(1.6rem, 2, bold);
+      @include media-tablet{
+        @include fonts(2rem, 1.4, bold);
+    }
 }
 
 h5 {

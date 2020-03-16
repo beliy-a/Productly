@@ -2,26 +2,41 @@
     padding: 15px 0;
     @extend %shadowed;
 
-    &__flex {
+    .b-container {
+        display: flex;
+        align-items: center;
+        
+        .burger__menu {
+            margin-right: 37px;
+        }
+    }
+
+    &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
     &__navigation .navigation {
         display: flex;
         align-items: center;
     }
-
+    &__navigation {
+        @include media-tablet {
+            display: none;
+        }
+    }
     &__navigation li + li {
         margin-left: 17px;
     }
-
     &__buttons {
         font-size: 0;
 
         .button + .button {
             margin-left: 15px;
+        }
+
+        @include media-mobile {
+            display: none;
         }
     }
 }

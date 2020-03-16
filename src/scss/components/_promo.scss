@@ -1,0 +1,68 @@
+.promo {
+    padding: 30px 0 55px;
+    overflow: hidden;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @include media-mobile {
+            flex-direction: column-reverse;
+        }
+    }
+    &__title {
+        color: $heading-color;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        @extend %font-secondary;
+        @include fonts(1.8rem, 1.55);
+        max-width: 486px;
+        color: $text-color;
+        margin-bottom: 45px;
+    }
+    &__content {
+        width: 55%;
+        @include media-mobile {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        @include media-tablet {
+            white-space: nowrap;
+        }
+        @include media-mobile {
+            flex-direction: column;
+        }
+
+        .button {
+            padding: 15px 40px;
+            font-weight: bold;
+            margin-right: 44px;
+            @include media-mobile {
+                margin-right: 0;
+                margin-bottom: 26px;
+            }
+        }
+    }
+    
+    &__img {
+        width: 45%;
+        overflow: hidden;
+        @include media-mobile {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        img {
+            object-fit: cover;
+            @include media-mobile {
+                max-width: 100%;
+            }
+        }
+    }
+}

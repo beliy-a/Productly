@@ -1,0 +1,41 @@
+.footer {
+    padding: 60px 0 70px;
+
+    .f-container {
+        display: flex;
+        @include media-tablet {
+            flex-direction: column;
+        }
+        @include media-mobile {
+            align-items: flex-start;
+        }
+    }
+
+    .logo {
+        margin-bottom: 35px;
+    }
+    
+    &__navigation {
+        display: flex;
+        justify-content: space-around;
+        flex-grow: 1;
+        @include media-tablet {
+            justify-content: space-between;
+        }
+        @include media-mobile {
+            flex-direction: column;
+        }
+    }
+    &__navigation__title {
+        margin-bottom: 15px;
+    }
+    .navigation__item + .navigation__item {
+        margin-top: 15px;
+    }
+
+    .nav-container + .nav-container {
+        @include media-mobile {
+            margin-top: 30px;
+        }
+    }
+}

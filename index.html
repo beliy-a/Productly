@@ -3,15 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/scss/styles.css">
+        <link rel="stylesheet" href="./src/scss/styles.css">
         <title>Productly</title>
     </head>
     <body>
         <header class="header">
-            <div class="wrapper header__flex">
-                <div class="logo">
-                    <a href="#" class="logo__home"></a>
-                    <img src="./img/Logo.png" alt="Logo" class="logo__img">
+            <div class="wrapper header__container">
+                <div class="b-container">
+                    <div class="burger__menu">
+                        <span class="burger__line"></span>
+                    </div>
+                    <div class="logo">
+                        <a href="#" class="logo__home"></a>
+                        <img src="./img/Logo.png" alt="Logo" class="logo__img">
+                    </div>
                 </div>
 
                 <nav class="header__navigation">
@@ -39,77 +44,82 @@
         </header>
 
         <main class="main">
-            <section class="promo wrapper">
-                <div class="promo__content">
-                    <h1 class="promo__title">The Design Thinking superpowers</h1>
-                    <p class="promo__text">Tools, tutorials, design and
-                        innovation experts, all in one place! The most intuitive
-                        way to imagine your next user
-                        experience.</p>
-                    <div class="promo__buttons">
-                        <button class="button button--colored">Get started</button>
-                        <a href="#" class="link-button">
-                            <span class="icon icon--play"></span> Watch the
-                            Video
-                        </a>
+            <section class="promo">
+                <div class="wrapper promo-container">
+                    <div class="promo__content">
+                        <h1 class="promo__title">The Design Thinking superpowers</h1>
+                        <p class="promo__text">Tools, tutorials, design and
+                            innovation experts, all in one place! The most
+                            intuitive
+                            way to imagine your next user
+                            experience.</p>
+                        <div class="promo__buttons">
+                            <button class="button button--colored">Get started</button>
+                            <a href="#" class="link-button">
+                                <span class="icon icon--play"></span> Watch the
+                                Video
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="promo__img">
-                    <img src="./img/promo/promo.png" alt="promo">
+                    <div class="promo__img">
+                        <img src="./img/promo/promo.png" alt="promo">
+                    </div>
                 </div>
             </section>
 
-            <section class="tools wrapper">
-                <h2 class="tools__title">We design tools to unveil your
-                    superpowers</h2>
-                <div class="tools__cards">
-                    <!-- 1 -->
-                    <div class="tool__card">
-                        <div class="tool__icon tool__icon--violet">
-                            <span class="icon icon--arrow"></span>
+            <section class="tools">
+                <div class="wrapper">
+                    <h2 class="tools__title">We design tools to unveil your
+                        superpowers</h2>
+                    <div class="tools__cards">
+                        <!-- 1 -->
+                        <div class="tool__card">
+                            <div class="tool__icon tool__icon--violet">
+                                <span class="icon icon--arrow"></span>
+                            </div>
+                            <h4 class="tool__card__title">First click tests</h4>
+                            <p class="toole__card__text">
+                                While most people enjoy
+                                casino gambling,
+                            </p>
                         </div>
-                        <h4 class="tool__card__title">First click tests</h4>
-                        <p class="toole__card__text">
-                            While most people enjoy
-                            casino gambling,
-                        </p>
-                    </div>
-                    <!-- 2 -->
-                    <div class="tool__card">
-                        <div class="tool__icon tool__icon--yellow">
-                            <span class="icon icon--arc"></span>
+                        <!-- 2 -->
+                        <div class="tool__card">
+                            <div class="tool__icon tool__icon--yellow">
+                                <span class="icon icon--arc"></span>
+                            </div>
+                            <h4 class="tool__card__title">Design surveys</h4>
+                            <p class="toole__card__text">
+                                Sports betting, lottery and bingo playing for the
+                                fun
+                            </p>
                         </div>
-                        <h4 class="tool__card__title">Design surveys</h4>
-                        <p class="toole__card__text">
-                            Sports betting, lottery and bingo playing for the
-                            fun
-                        </p>
-                    </div>
-                    <!-- 3 -->
-                    <div class="tool__card">
-                        <div class="tool__icon tool__icon--red">
-                            <span class="icon icon--heart"></span>
+                        <!-- 3 -->
+                        <div class="tool__card">
+                            <div class="tool__icon tool__icon--red">
+                                <span class="icon icon--heart"></span>
+                            </div>
+                            <h4 class="tool__card__title">Preference tests</h4>
+                            <p class="toole__card__text">
+                                The Myspace page defines
+                                the individual.
+                            </p>
                         </div>
-                        <h4 class="tool__card__title">Preference tests</h4>
-                        <p class="toole__card__text">
-                            The Myspace page defines
-                            the individual.
-                        </p>
-                    </div>
-                    <!-- 4 -->
-                    <div class="tool__card">
-                        <div class="tool__icon tool__icon--blue">
-                            <span class="icon icon--hourglass"></span>
+                        <!-- 4 -->
+                        <div class="tool__card">
+                            <div class="tool__icon tool__icon--blue">
+                                <span class="icon icon--hourglass"></span>
+                            </div>
+                            <h4 class="tool__card__title">Five second tests</h4>
+                            <p class="toole__card__text">
+                                Personal choices and the overall personality of the
+                                person.
+                            </p>
                         </div>
-                        <h4 class="tool__card__title">Five second tests</h4>
-                        <p class="toole__card__text">
-                            Personal choices and the overall personality of the
-                            person.
-                        </p>
                     </div>
-                </div>
-                <div class="tools__buttons">
-                    <button class="button button--colored">Sign Up now</button>
+                    <div class="tools__buttons">
+                        <button class="button button--colored">Sign Up now</button>
+                    </div>
                 </div>
             </section>
 
@@ -125,7 +135,7 @@
                 </ul>
                 <div class="strategies__cards">
                     <!-- 1 -->
-                    <div class="strategy__card">
+                    <article class="strategy__card">
                         <div class="strategy__img">
                             <img src="./img/strategy/image1.jpg" alt="strategy">
                         </div>
@@ -138,9 +148,9 @@
                                 <li class="tab tab--colored">Design</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                     <!-- 2 -->
-                    <div class="strategy__card">
+                    <article class="strategy__card">
                         <div class="strategy__img">
                             <img src="./img/strategy/image 2.jpg"
                                 alt="strategy">
@@ -152,9 +162,9 @@
                                 <li class="tab tab--colored">Culture</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                     <!-- 3 -->
-                    <div class="strategy__card">
+                    <article class="strategy__card">
                         <div class="strategy__img">
                             <img src="./img/strategy/image 3.jpg"
                                 alt="strategy">
@@ -168,9 +178,9 @@
                                 <li class="tab tab--colored">Art</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                     <!-- 4 -->
-                    <div class="strategy__card strategy__card--long">
+                    <article class="strategy__card strategy__card--long">
                         <div class="strategy__img">
                             <img src="./img/strategy/image bg.jpg"
                                 alt="strategy">
@@ -185,9 +195,9 @@
                                 <li class="tab tab--colored">Art</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                     <!-- 5 -->
-                    <div class="strategy__card">
+                    <article class="strategy__card">
                         <div class="strategy__img">
                             <img src="./img/strategy/image 4.jpg"
                                 alt="strategy">
@@ -199,9 +209,9 @@
                                 <li class="tab tab--colored">Design</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                     <!-- 6 -->
-                    <div class="strategy__card">
+                    <article class="strategy__card">
                         <div class="strategy__img">
                             <img src="./img/strategy/image1.jpg" alt="strategy">
                         </div>
@@ -214,9 +224,9 @@
                                 <li class="tab tab--colored">Design</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                     <!-- 7 -->
-                    <div class="strategy__card">
+                    <article class="strategy__card">
                         <div class="strategy__img">
                             <img src="./img/strategy/image 2.jpg"
                                 alt="strategy">
@@ -228,9 +238,9 @@
                                 <li class="tab tab--colored">Culture</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                     <!-- 8 -->
-                    <div class="strategy__card">
+                    <article class="strategy__card">
                         <div class="strategy__img">
                             <img src="./img/strategy/image 3.jpg"
                                 alt="strategy">
@@ -244,7 +254,7 @@
                                 <li class="tab tab--colored">Art</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </section>
 
@@ -342,7 +352,6 @@
                                 <span class="icon icon--email"></span>
                                 <a href="mailto:emailname@gmail.com">emailname@gmail.com</a>
                             </div>
-
                         </div>
                         <form action="" method="POST" class="form
                             contact-us__form">
@@ -352,14 +361,12 @@
                                 <input type="email" placeholder="Your email"
                                     required>
                             </div>
-                            <textarea name="question" placeholder="What do you
-                                want to ask?"></textarea>
+                            <textarea name="question" placeholder="What do you want to ask?"></textarea>
                             <div class="contact-us__buttons">
                                 <button class="button button--colored">Send</button>
                             </div>
                         </form>
                     </div>
-
                 </div>
             </section>
         </main>
@@ -400,10 +407,12 @@
                                 <a href="#" class="navigation__link">Financing</a>
                             </li>
                             <li class="navigation__item">
-                                <a href="#" class="navigation__link">Privacy Police</a>
+                                <a href="#" class="navigation__link">Privacy
+                                    Police</a>
                             </li>
                             <li class="navigation__item">
-                                <a href="#" class="navigation__link">Terms of Service</a>
+                                <a href="#" class="navigation__link">Terms of
+                                    Service</a>
                             </li>
                         </ul>
                     </div>
@@ -426,9 +435,7 @@
                         </ul>
                     </div>
                 </nav>
-
             </div>
-
         </footer>
     </body>
 </html>

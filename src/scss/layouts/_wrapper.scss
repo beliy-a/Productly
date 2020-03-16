@@ -1,0 +1,9 @@
+.wrapper {
+    @include wrap($content-width);
+    @include media-laptop {
+        padding: 0 46px;
+    }
+    @include media-mobile {
+        padding: 0 21px;
+    }
+}

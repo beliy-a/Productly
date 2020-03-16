@@ -12,6 +12,23 @@
         >* {
             width: calc(100% / 4 - 4.2%);
             margin: 0 2.1%;
+            @include media-tablet {
+                width: calc(100% / 2 - 4.2%);
+                margin-bottom: 3%;
+            }
+            @include media-mobile {
+                width: calc(100% / 1 - 4.2%);
+                margin-bottom: 8%;
+            }
+        }
+    }
+
+    .tool__card {
+        @include media-tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
     }
 
@@ -55,5 +72,8 @@
     .tools__buttons {
         margin-top: 60px;
         text-align: center;
+        @include media-mobile {
+            margin-top: 0;
+        }
     }
 }
