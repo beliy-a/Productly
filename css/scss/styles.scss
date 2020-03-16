@@ -4,9 +4,22 @@
 
 @import './helpers/vars';
 @import './helpers/mixins';
+@import './helpers/icons';
+@import './helpers/placeholders';
 @import './helpers/scaffolding';
 
+@import './layouts/header';
+@import './layouts/wrapper';
+@import './layouts/footer';
+
 @import './components/logo';
+@import './components/tabs';
 @import './components/navigation';
-@import './components/button';
-@import './components/header';
+@import './components/form';
+@import './components/worker';
+@import './components/buttons';
+@import './components/promo';
+@import './components/tools';
+@import './components/strategies';
+@import './components/about-us';
+@import './components/contact-us';

@@ -1,3 +1,4 @@
+
 @mixin wrap ($width){
     max-width: $width;
     margin: 0 auto;
@@ -7,4 +8,11 @@
 @mixin size ($width, $height) {
     width: $width;
     height: $height;
+}
+
+@mixin fonts ($size, $lHeight, $weight: 400, $style: normal ) {
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    line-height: $lHeight;
 }

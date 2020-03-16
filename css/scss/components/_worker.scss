@@ -1,0 +1,20 @@
+.worker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0 35px 35px;
+    &__email {
+        @include fonts(1.4rem, 1.85);
+        text-decoration: none;
+        color: $link-color;
+    }
+    &__avator {
+        @include size(98px, 98px);
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    &__img {
+        object-fit: cover;
+        transform:translate(-30px, -15px);
+    }
+}

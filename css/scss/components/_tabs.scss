@@ -1,0 +1,23 @@
+.tabs {
+    display: flex;
+
+    .tab {
+        @include fonts(1.3rem, 2.15);
+        padding: 0 14px;
+        border-radius: 90px;
+        text-transform: capitalize;
+        &--selected {
+            color: $light-color;
+            border: 1px solid $primary-color;
+            background-color: $primary-color;
+        }
+        &--bordered {
+            border: 1px solid $border-color;
+            background-color: transparent;
+        }
+        &--colored {
+            border: 1px solid $tab-color;
+            background-color: $tab-color;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.strategies {
+    padding-top: 30px;
+
+    &__title {
+        margin-bottom: 14px;
+    }
+
+    &__description {
+        @include fonts(1.6rem, 1.6);
+        margin-bottom: 24px;
+    }
+
+    &__tabs {
+        margin-bottom: 31px;
+
+        .tab + .tab {
+            margin-left: 7px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1%;
+    }
+}
+
+.strategy__card {
+    margin: 0 1% 2%;
+    width: calc(100% / 3 - 2%);
+    border-radius: 8px;
+    overflow: hidden;
+    @extend %transition;
+    @extend %shadowed;
+    &--long {
+        width: 64.6%;
+    }
+    &:hover {
+        box-shadow: none;
+        .strategy__title {
+            color: $primary-color;
+        }
+    }
+
+}
+
+.strategy__img {
+    overflow: hidden;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.strategy__content {
+    width: 100%;
+    padding: 24px 33px;
+}
+
+.strategy__title {
+    @extend %transition;
+    margin-bottom: 30px;
+}
+
+.strategy__tabs {
+    .tab + .tab {
+        margin-left: 4px;
+    }
+}

@@ -1,0 +1,50 @@
+.button {
+    border: none;
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color:  $text-secondary-color;
+    text-transform: capitalize;
+    
+    @include fonts(1.6rem, 1.37, 500);
+    @extend %font-secondary;
+    @extend %transition;
+
+    &--boundary {
+        border: 1px solid $border-secondary-color;
+
+        &:hover {
+            background-color: $bg-secondary-color;
+        }
+    }
+
+    &--colored {
+        background-color: $primary-color;
+        color: $light-color;
+        border: 1px solid $primary-color;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+}
+
+.link-button {
+    text-decoration: underline;
+    color: $primary-color;
+    text-transform: capitalize;
+    @extend %font-secondary;
+    @include fonts(1.6rem, 1.5, 600);
+    @extend %transition;
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+        color: $secondary-color;
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+}

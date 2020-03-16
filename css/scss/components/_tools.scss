@@ -1,0 +1,59 @@
+.tools {
+    padding: 56px 0 90px;
+    background-image: url('/img/tools/Bg.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -2.1%;
+        >* {
+            width: calc(100% / 4 - 4.2%);
+            margin: 0 2.1%;
+        }
+    }
+
+    &__title {
+        color: $heading-color;
+        text-align: center;
+        margin: 0 auto 70px;
+        max-width: 462px;
+    }
+
+    .tool__icon {
+        @include size(50px, 50px);
+        border-radius: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        &--violet {
+            background-color: $violet-color;
+        }
+        &--yellow {
+            background-color: $yellow-color;
+        }
+        &--red {
+            background-color: $red-color;
+        }
+        &--blue {
+            background-color: $blue-color;
+        }
+    }
+
+    .tool__card__title {
+        color: $heading-color;
+        margin-bottom: 16px;
+    }
+
+    .toole__card__text {
+        @include fonts(1.6rem, 1.625);
+    }
+
+    .tools__buttons {
+        margin-top: 60px;
+        text-align: center;
+    }
+}

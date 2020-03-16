@@ -1,15 +1,15 @@
 .navigation {
     
     &__link {
-        color: $primary-color;
-        font-size: 15px;
+        color: $text-color;
+        font-size: 1.5rem;
         text-transform: capitalize;
         text-decoration: none;
-        transition: .15s linear;
+        @extend %transition;
 
         &:hover,
         &:focus {
-            color: $bg-btn-color;
+            color: $primary-color;
         }
     }
 }

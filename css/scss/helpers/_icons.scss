@@ -1,0 +1,27 @@
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include size (18px, 19px);
+    &--play {
+        background-image: url('/img/icons/icon-play.svg');
+    }
+    &--heart {
+        background-image: url('/img/icons/heart.svg');
+    }
+    &--arrow {
+        background-image: url('/img/icons/arrow.svg');
+    }
+    &--arc {
+        background-image: url('/img/icons/arc.svg');
+    }
+    &--hourglass {
+        background-image: url('/img/icons/hourglass.svg');
+    }
+    &--email {
+        background-image: url('/img/icons/email.svg');
+    }
+    &--phone {
+        background-image: url('/img/icons/phone.svg');
+    }
+}

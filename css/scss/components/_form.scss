@@ -1,0 +1,19 @@
+.form {
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px 20px;
+        @include fonts(1.6rem, 1.62);
+        color: $heading-color;
+        background-color: $light-color;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        outline: none;
+        &::placeholder {
+            color: $placeholder-color;
+        }
+        &:focus {
+            border: 1px solid $primary-color;
+        }
+    }
+}

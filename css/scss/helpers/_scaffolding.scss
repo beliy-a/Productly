@@ -5,17 +5,37 @@
 }
 
 html {
-    font-size: 15px;
+    font-size: 10px;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    @extend %font-primary;
+    @include fonts(1.5rem, 1);
     color: $text-color;
-    background-color: $bg-color;
+    background-color: $light-color;
 }
 
-.wrapper {
-    @include wrap(1200px);
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-color;
 }
 
+h1 {
+    @extend %font-secondary;
+    @include fonts(4.4rem, 1.22, bold);
+}
+
+h2 {
+    @include fonts(3.4rem, 1.35, bold);
+}
+
+h3 {
+    @include fonts (2.4rem, 1.4, bold);
+}
+
+h4 {
+     @include fonts(1.6rem, 2, bold);
+}
+
+h5 {
+    @include fonts(1.4rem, 1.8);
+}

@@ -1,6 +1,6 @@
 .header {
-    padding: 20px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    @extend %shadowed;
 
     &__flex {
         display: flex;
