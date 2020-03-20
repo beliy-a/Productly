@@ -59,7 +59,11 @@
         }
 
         img {
-            object-fit: cover;
+            max-width: 100%;
+            @include media-tablet {
+                object-fit: cover;
+                max-width: none;
+            }
             @include media-mobile {
                 max-width: 100%;
             }

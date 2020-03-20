@@ -4,24 +4,24 @@
     background-position: center;
     @include size (18px, 19px);
     &--play {
-        background-image: url('/img/icons/icon-play.svg');
+        background-image: url('/src/img/icons/icon-play.svg');
     }
     &--heart {
-        background-image: url('/img/icons/heart.svg');
+        background-image: url('/src/img/icons/heart.svg');
     }
     &--arrow {
-        background-image: url('/img/icons/arrow.svg');
+        background-image: url('/src/img/icons/arrow.svg');
     }
     &--arc {
-        background-image: url('/img/icons/arc.svg');
+        background-image: url('/src/img/icons/arc.svg');
     }
     &--hourglass {
-        background-image: url('/img/icons/hourglass.svg');
+        background-image: url('/src/img/icons/hourglass.svg');
     }
     &--email {
-        background-image: url('/img/icons/email.svg');
+        background-image: url('/src/img/icons/email.svg');
     }
     &--phone {
-        background-image: url('/img/icons/phone.svg');
+        background-image: url('/src/img/icons/phone.svg');
     }
 }

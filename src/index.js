@@ -1,10 +1,16 @@
+import { Article } from './js/Article.js';
+import { Utils } from './js/helpers/Utils.js';
+
+
 const strategiesTabs = document.querySelector('.strategies__tabs');
 const strategiesCards = document.querySelector('.strategies__cards');
 
-
-
 strategiesTabs.addEventListener('click', addStrategiesTabsClickHandler);
 
+
+
+
+// StrategiesTabs
 function addStrategiesTabsClickHandler(e) {
     let target = e.target;
 
@@ -47,3 +53,19 @@ function showBySelectedTabs(selectedTab) {
         });
     });
 }
+
+// Article
+renderArticleToDom();
+
+function renderArticleToDom() {
+    strategiesCards.innerHTML = '';
+    generateArticles(Utils.sendData()).forEach(article => strategiesCards.appendChild(article.generateArticle()));
+}
+
+function generateArticles(data) {
+    const articles = [];
+    data.forEach(article => articles.push(new Article(article)));
+
+    return articles;
+}
+
