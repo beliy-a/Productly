@@ -43,7 +43,10 @@ function addSelectedTabs(element) {
 }
 
 function showAllStrategies() {
-    strategiesCards.querySelectorAll('.strategy__card').forEach(card => card.classList.remove('strategy__card--hidden'));
+    strategiesCards.querySelectorAll('.strategy__card').forEach(card => {
+        card.classList.remove('strategy__card--none');
+        card.classList.remove('strategy__card--hidden');
+    });
 }
 
 function showBySelectedTabs(selectedTab) {
@@ -51,7 +54,13 @@ function showBySelectedTabs(selectedTab) {
         card.querySelectorAll('.tab').forEach(tab => {
             if (tab.innerText.toUpperCase() !== selectedTab.toUpperCase()) {
                 card.classList.add('strategy__card--hidden');
+                setTimeout(function () {
+                    if (card.classList.contains('strategy__card--hidden')) {
+                        card.classList.add('strategy__card--none');
+                    }
+                }, 400);
             } else {
+                card.classList.remove('strategy__card--none');
                 card.classList.remove('strategy__card--hidden');
             }
         });
@@ -74,15 +83,15 @@ function generateArticles(data) {
 }
 
 
-// Test Modal
+//  Modal Article
 function generateModal(e) {
     let data = Utils.sendData();
     let targetId = e.target.closest('.strategy__card').getAttribute('data-id');
 
     data.forEach(article => {
         if (article.id == targetId) {
-           let modal = new ModalArticle(article);
-           modal.buildModal();
+            let modal = new ModalArticle(article);
+            modal.buildModal();
         }
     });
 
