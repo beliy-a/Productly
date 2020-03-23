@@ -9,7 +9,7 @@ const strategiesTabs = document.querySelector('.strategies__tabs');
 const strategiesCards = document.querySelector('.strategies__cards');
 
 strategiesTabs.addEventListener('click', addStrategiesTabsClickHandler);
-strategiesCards.addEventListener('click', generateModal);
+strategiesCards.addEventListener('click', renderModalToDom);
 
 
 
@@ -84,7 +84,7 @@ function generateArticles(data) {
 
 
 //  Modal Article
-function generateModal(e) {
+function renderModalToDom(e) {
     let data = Utils.sendData();
     let targetId = e.target.closest('.strategy__card').getAttribute('data-id');
 
@@ -96,3 +96,7 @@ function generateModal(e) {
     });
 
 }
+
+// Burger__menu 
+
+// function add
