@@ -7,6 +7,7 @@ import { Article } from './js/Article.js';
 
 const strategiesTabs = document.querySelector('.strategies__tabs');
 const strategiesCards = document.querySelector('.strategies__cards');
+const burgerMenu = document.querySelector('.burger__menu');
 
 strategiesTabs.addEventListener('click', addStrategiesTabsClickHandler);
 strategiesCards.addEventListener('click', renderModalToDom);
@@ -98,5 +99,7 @@ function renderModalToDom(e) {
 }
 
 // Burger__menu 
-
-// function add
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('burger__menu--cross');
+    document.querySelector('.header__navigation').classList.toggle('header__navigation--visible');
+});

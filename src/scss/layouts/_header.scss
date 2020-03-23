@@ -1,5 +1,6 @@
 .header {
     padding: 15px 0;
+    position: relative;
     @extend %shadowed;
 
     .b-container {
@@ -22,7 +23,28 @@
     }
     &__navigation {
         @include media-tablet {
-            display: none;
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 30vw;
+            height: 60vh;
+            background-color: $light-color;
+            transition: .6s ease-in-out;
+            transform: translateX(-100%);
+            box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.05);
+            &--visible {
+                visibility: visible;
+                transform: translateX(0);
+            }
+            .navigation {
+                flex-direction: column;
+            
+                &__item {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+            }
         }
     }
     &__navigation li + li {
@@ -39,4 +61,5 @@
             display: none;
         }
     }
+
 }

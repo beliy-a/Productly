@@ -652,6 +652,7 @@ h5 {
 
 .header {
   padding: 15px 0;
+  position: relative;
 }
 
 .header .b-container {
@@ -690,7 +691,34 @@ h5 {
 
 @media (max-width: 768px) {
   .header__navigation {
-    display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 30vw;
+    height: 60vh;
+    background-color: #fff;
+    -webkit-transition: .6s ease-in-out;
+    transition: .6s ease-in-out;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  }
+  .header__navigation--visible {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .header__navigation .navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__navigation .navigation__item {
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
 
@@ -824,8 +852,10 @@ h5 {
 .burger__menu {
   display: none;
   position: relative;
+  overflow: hidden;
+  z-index: 100;
   cursor: pointer;
-  width: 31px;
+  width: 30px;
   height: 25px;
 }
 
@@ -841,8 +871,12 @@ h5 {
   height: 3px;
   background-color: #173A56;
   position: absolute;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
   top: 50%;
   margin-top: -1.5px;
+  left: 50%;
+  margin-left: -15px;
 }
 
 .burger__menu .burger__line::before, .burger__menu .burger__line::after {
@@ -857,6 +891,20 @@ h5 {
 .burger__menu .burger__line::after {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+}
+
+.burger__menu--cross .burger__line, .burger__menu--cross .burger__menu .burger__line::before, .burger__menu .burger__menu--cross .burger__line::before, .burger__menu--cross .burger__menu .burger__line::after, .burger__menu .burger__menu--cross .burger__line::after {
+  height: 0;
+}
+
+.burger__menu--cross .burger__line::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger__menu--cross .burger__line::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .tabs {
