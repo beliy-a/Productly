@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
 
+
     &__content {
         position: relative;
         width: 600px;
@@ -31,10 +32,17 @@
                 object-fit: cover;
             }
         }
+        &__date,
+        &__title,
+        &__text {
+            padding: 0 20px;
+        }
+        &__title {
+            margin-bottom: 15px;
+        }
         &__text {
             text-align: justify;
             line-height: 1.5;
-            padding: 0 20px;
             margin-bottom: 15px;
         }
     }

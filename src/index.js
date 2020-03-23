@@ -1,11 +1,15 @@
-import { Article } from './js/Article.js';
 import { Utils } from './js/helpers/Utils.js';
+import { ModalArticle } from './js/ModalArticle.js';
+import { Article } from './js/Article.js';
+
+
 
 
 const strategiesTabs = document.querySelector('.strategies__tabs');
 const strategiesCards = document.querySelector('.strategies__cards');
 
 strategiesTabs.addEventListener('click', addStrategiesTabsClickHandler);
+strategiesCards.addEventListener('click', generateModal);
 
 
 
@@ -69,3 +73,17 @@ function generateArticles(data) {
     return articles;
 }
 
+
+// Test Modal
+function generateModal(e) {
+    let data = Utils.sendData();
+    let targetId = e.target.closest('.strategy__card').getAttribute('data-id');
+
+    data.forEach(article => {
+        if (article.id == targetId) {
+           let modal = new ModalArticle(article);
+           modal.buildModal();
+        }
+    });
+
+}

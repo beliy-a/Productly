@@ -46,7 +46,7 @@ export class Utils {
                 id: 6,
                 title: 'Increasing Prosperity With Positive Thinking',
                 urlToImage: '/src/img/strategy/image1.jpg',
-                tabs: ['Art','Design'],
+                tabs: ['Art', 'Design'],
                 content: 'Knowing yourself is the first, and a very critical step in the process of planning your future...',
                 date: '01.02.2020'
             },

@@ -591,10 +591,17 @@ h5 {
      object-fit: cover;
 }
 
+.modal__content__date, .modal__content__title, .modal__content__text {
+  padding: 0 20px;
+}
+
+.modal__content__title {
+  margin-bottom: 15px;
+}
+
 .modal__content__text {
   text-align: justify;
   line-height: 1.5;
-  padding: 0 20px;
   margin-bottom: 15px;
 }
 
