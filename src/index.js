@@ -95,7 +95,6 @@ function renderModalToDom(e) {
             modal.buildModal();
         }
     });
-
 }
 
 // Burger__menu 

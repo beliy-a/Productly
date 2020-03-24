@@ -1,11 +1,13 @@
 .header {
     padding: 15px 0;
     position: relative;
+    z-index: 105;
     @extend %shadowed;
 
     .b-container {
         display: flex;
         align-items: center;
+        position: relative;
         
         .burger__menu {
             margin-right: 37px;
@@ -28,19 +30,13 @@
             position: absolute;
             top: 100%;
             left: 0;
+            z-index: 100;
             width: 30vw;
             height: 60vh;
             background-color: $light-color;
             transition: .6s ease-in-out;
             transform: translateX(-100%);
             box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.05);
-            &--visible {
-                visibility: visible;
-                transform: translateX(0);
-            }
-            &--block {
-                display: block;
-            }
             .navigation {
                 flex-direction: column;
             
@@ -49,6 +45,18 @@
                     margin-top: 20px;
                 }
             }
+        }
+        @include  media-mobile{
+            width: 100vw;
+            height: 100vh;
+            transform: translateY(-100%);
+        }
+         &--visible {
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+        &--block {
+            display: block;
         }
     }
     &__navigation li + li {
