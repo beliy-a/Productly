@@ -100,6 +100,16 @@ function renderModalToDom(e) {
 
 // Burger__menu 
 burgerMenu.addEventListener('click', () => {
+    const headerNav = document.querySelector('.header__navigation');
     burgerMenu.classList.toggle('burger__menu--cross');
-    document.querySelector('.header__navigation').classList.toggle('header__navigation--visible');
+
+    headerNav.classList.add('header__navigation--block');
+    setTimeout(() => {
+        headerNav.classList.toggle('header__navigation--visible');
+    }, 0);
+    setTimeout(() => {
+        if (!headerNav.classList.contains('header__navigation--visible')) {
+            headerNav.classList.remove('header__navigation--block');
+        }
+    }, 650);
 });

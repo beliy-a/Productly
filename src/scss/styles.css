@@ -691,6 +691,7 @@ h5 {
 
 @media (max-width: 768px) {
   .header__navigation {
+    display: none;
     visibility: hidden;
     position: absolute;
     top: 100%;
@@ -709,6 +710,9 @@ h5 {
     visibility: visible;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+  .header__navigation--block {
+    display: block;
   }
   .header__navigation .navigation {
     -webkit-box-orient: vertical;

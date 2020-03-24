@@ -23,6 +23,7 @@
     }
     &__navigation {
         @include media-tablet {
+            display: none;
             visibility: hidden;
             position: absolute;
             top: 100%;
@@ -36,6 +37,9 @@
             &--visible {
                 visibility: visible;
                 transform: translateX(0);
+            }
+            &--block {
+                display: block;
             }
             .navigation {
                 flex-direction: column;
